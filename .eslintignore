@@ -1,0 +1,7 @@
+lib
+es
+dist
+lib-cov
+coverage.html
+.DS_Store
+node_modules
