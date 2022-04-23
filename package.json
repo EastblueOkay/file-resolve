@@ -1,6 +1,6 @@
 {
   "name": "file-resolve",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Resolve file by path and extensions",
   "main": "lib/file-resolve.js",
   "module": "es/file-resolve.js",

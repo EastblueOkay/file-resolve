@@ -20,15 +20,23 @@ test("[default] should get find.ts while paas dir/find", () => {
 });
 
 test("[extension] should get index.md while paas a directory", () => {
-  expect(fileResolve(dir, [".md"])).toBe(path.resolve(dir, "index.md"));
+  expect(fileResolve.extensions([".md"])(dir)).toBe(
+    path.resolve(dir, "index.md")
+  );
 });
 
 test("[extension] should get find.md while paas a directory", () => {
-  expect(fileResolve(path.resolve(dir, "find"), [".md"])).toBe(
+  expect(fileResolve.extensions([".md"])(path.resolve(dir, "find"))).toBe(
     path.resolve(dir, "find.md")
   );
 });
 
 test("[extension] should get index.json while paas a directory", () => {
-  expect(fileResolve(dir, [".json"])).toBe(path.resolve(dir, "index.json"));
+  expect(fileResolve.extensions([".json"])(dir)).toBe(
+    path.resolve(dir, "index.json")
+  );
+});
+
+test("[404] should get null while 404", () => {
+  expect(fileResolve("test")).toBe(null);
 });

@@ -14,12 +14,17 @@ npm i file-resolve
 
 ```js
 import fileResolve from "file-resolve";
+
 fileResolve("file/path"); // file/path/index.ts
-fileResolve("file/path", [".css"]); // file/path/index.css
+
+fileResolve.extensions([".css"])("file/path"); // file/path/index.css
 ```
 
 ## API
 
 ```js
-fileResolve(path: string, extensions: string[] = [".js", ".jsx", ".ts", ".tsx"])
+interface fileResolve {
+  (p: string): string;
+  extensions(extensions: string[]): any; // default [".js", ".jsx", ".ts", ".tsx"]
+}
 ```
