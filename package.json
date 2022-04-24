@@ -1,9 +1,8 @@
 {
   "name": "file-resolve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Resolve file by path and extensions",
   "main": "lib/file-resolve.js",
-  "module": "es/file-resolve.js",
   "types": "lib/file-resolve.d.ts",
   "scripts": {
     "build": "tsc --declaration --emitDeclarationOnly && swc src/*.ts -d lib --config-file ./lib.swcrc",
